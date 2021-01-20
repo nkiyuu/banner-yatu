@@ -1,8 +1,10 @@
 from pathlib import Path
 
+env = environ.Env()
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['localhost'])
 
 
 INSTALLED_APPS = [

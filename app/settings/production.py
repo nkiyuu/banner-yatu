@@ -2,8 +2,6 @@ from .common import *
 import os
 import environ
 
-env = environ.Env()
-
 DEBUG = False
 
 DATABASES = {
