@@ -11,10 +11,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': env.get_value('DB_NAME', cast=str, default=''),
-        'USER': env('DB_USER', cast=str, default=''),
-        'PASSWORD': env('DB_PASSWORD', cast=str, default=''),
-        'PORT': env('DB_PORT', cast=int, default=None),
-        'HOST': env('DB_HOST', cast=str, default=''),
+        'USER': env.get_value('DB_USER', cast=str, default=''),
+        'PASSWORD': env.get_value('DB_PASSWORD', cast=str, default=''),
+        'PORT': env.get_value('DB_PORT', cast=int, default=None),
+        'HOST': env.get_value('DB_HOST', cast=str, default=''),
     }
 }
 
