@@ -1,6 +1,4 @@
 from .common import *
-import os
-import environ
 
 DEBUG = False
 
