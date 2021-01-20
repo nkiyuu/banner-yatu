@@ -5,7 +5,7 @@ import environ
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
-DEBUG = True
+DEBUG = False
 
 DATABASES = {
     'default': {

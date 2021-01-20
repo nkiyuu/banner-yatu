@@ -1,6 +1,6 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = []
 
@@ -45,16 +45,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'app.wsgi.application'
 
 # TODO: ローカルと本番で環境が違うので変更する
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'banner_yatu',
-        'USER': 'root',
-        'PASSWORD': '',
-        'PORT': 3306,
-        'HOST': 'db'
-    }
-}
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
