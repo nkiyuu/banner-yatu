@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  app:
+  web:
     build: .
     command: sh ./bin/wait-for-mysql.sh db root 3306 python3 manage.py runserver 0.0.0.0:8000
     volumes:
