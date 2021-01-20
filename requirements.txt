@@ -1,4 +1,4 @@
-Django
+Django===2.0.0
 psycopg2
 mysqlclient
 django-environ
