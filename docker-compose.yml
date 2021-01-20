@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    command: sh ./bin/wait-for-mysql.sh db root 3306 python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
+    depends_on:
+      - db
+  db:
+    image: mysql:5.7
+    ports:
+      - '3309:3306'
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: banner_yatu
